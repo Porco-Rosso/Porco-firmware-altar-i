@@ -1,0 +1,20 @@
+# Copyright (c) 2025 Electronic Materials Office Ltd.
+# SPDX-License-Identifier: MIT
+
+file_format: "1"
+id: altar_i
+name: Altar I
+type: board
+arch: arm
+features:
+  - keys
+  - encoder
+  - studio
+outputs:
+  - usb
+  - ble
+revisions:
+  - "us"
+  - "uk"
+default_revision: "us"
+url: https://electronicmaterialsoffice.com/

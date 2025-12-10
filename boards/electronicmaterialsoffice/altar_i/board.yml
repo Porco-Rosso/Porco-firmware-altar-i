@@ -1,0 +1,14 @@
+# Copyright (c) 2025 Electronic Materials Office Ltd.
+# SPDX-License-Identifier: MIT
+
+board:
+  name: altar_i
+  vendor: electronicmaterialsoffice
+  revision:
+    format: custom
+    default: us
+    revisions:
+      - name: us
+      - name: uk
+  socs:
+    - name: nrf52840

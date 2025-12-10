@@ -1,0 +1,16 @@
+/*
+ * Copyright (c) 2025 Electronic Materials Office Ltd.
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "altar_i-layouts.dtsi"
+
+/ {
+    model = "Altar I, Rev. 1 (US)";
+    compatible = "electronicmaterialsoffice,altar_i_us";
+
+    chosen {
+        zmk,physical-layout = &layout_us;
+    };
+};

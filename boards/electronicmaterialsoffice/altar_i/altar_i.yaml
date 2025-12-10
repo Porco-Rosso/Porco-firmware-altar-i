@@ -1,0 +1,18 @@
+# Copyright (c) 2025 Electronic Materials Office Ltd.
+# SPDX-License-Identifier: MIT
+
+identifier: altar_i
+name: Altar I
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+supported:
+  - adc
+  - usb_device
+  - ble
+  - ieee802154
+  - pwm
+  - watchdog

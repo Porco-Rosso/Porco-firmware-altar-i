@@ -1,0 +1,12 @@
+# Copyright (c) 2025 Electronic Materials Office Ltd.
+# SPDX-License-Identifier: MIT
+
+config BOARD_ALTAR_I
+    select SOC_NRF52840_QIAA
+    imply RETAINED_MEM
+    imply RETENTION
+    imply RETENTION_BOOT_MODE
+
+choice ZMK_BOOTMODE_MAGIC_VALUE_BOOTLOADER_TYPE
+    default ZMK_BOOTMODE_MAGIC_VALUE_BOOTLOADER_TYPE_ADAFRUIT_NRF52
+endchoice

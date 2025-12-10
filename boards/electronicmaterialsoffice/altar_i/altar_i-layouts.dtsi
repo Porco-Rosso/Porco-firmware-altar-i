@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2025 Electronic Materials Office Ltd.
+ *
  * SPDX-License-Identifier: MIT
  */
 
@@ -10,6 +11,7 @@
         compatible = "zmk,physical-layout";
         display-name = "US Layout";
         transform = <&transform_us>;
+
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 175 100    0    0       0     0     0>
             , <&key_physical_attrs 100 100  175    0       0     0     0>
@@ -24,7 +26,6 @@
             , <&key_physical_attrs 100 100 1075    0       0     0     0>
             , <&key_physical_attrs 100 100 1175    0       0     0     0>
             , <&key_physical_attrs 100 100 1275    0       0     0     0>
-            , <&key_physical_attrs 100 100 1375    0       0     0     0>
             , <&key_physical_attrs  50 100 1525    0       0     0     0>
 
             , <&key_physical_attrs 100 100    0  100       0     0     0>
@@ -105,6 +106,7 @@
         compatible = "zmk,physical-layout";
         display-name = "UK Layout";
         transform = <&transform_uk>;
+
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 175 100    0    0       0     0     0>
             , <&key_physical_attrs 100 100  175    0       0     0     0>
@@ -119,7 +121,6 @@
             , <&key_physical_attrs 100 100 1075    0       0     0     0>
             , <&key_physical_attrs 100 100 1175    0       0     0     0>
             , <&key_physical_attrs 100 100 1275    0       0     0     0>
-            , <&key_physical_attrs 100 100 1375    0       0     0     0>
             , <&key_physical_attrs  50 100 1525    0       0     0     0>
 
             , <&key_physical_attrs 100 100    0  100       0     0     0>
@@ -204,12 +205,18 @@
 
         layout_us {
             physical-layout = <&layout_us>;
-            positions = <57 59 60 61 62 63 64 65 66 67 68 69 70 71>;
+            positions
+                = <56 42 14 59 60 61 62 63 64 65 66 67 68 69 70 71>
+                , <72 73 74 75 76 77 78 79 80>
+                ;
         };
 
         layout_uk {
             physical-layout = <&layout_uk>;
-            positions = <43 59 61 62 63 64 65 66 67 68 69 70 71 72>;
+            positions
+                = <42 56 59 60 61 62 63 64 65 66 67 68 69 70 71 72>
+                , <73 74 75 76 77 78 79 80 81>
+                ;
         };
     };
 };
