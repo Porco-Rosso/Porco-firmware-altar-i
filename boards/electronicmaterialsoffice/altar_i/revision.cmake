@@ -1,4 +1,4 @@
-# Copyright (c) 2025 Electronic Materials Office Ltd.
+# Copyright (c) 2025 Electronic Materials Office Limited
 # SPDX-License-Identifier: MIT
 
 set(ALTAR_I_REVISIONS "us" "uk")

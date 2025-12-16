@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 The ZMK Contributors
+ * Copyright (c) 2023 Electronic Materials Office Limited
  * SPDX-License-Identifier: MIT
  */
 
