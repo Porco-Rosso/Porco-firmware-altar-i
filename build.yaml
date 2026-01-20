@@ -4,15 +4,12 @@
 ---
 include:
   - board: altar_i@us
-    artifact-name: altar_i_us
-  - board: altar_i@us
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
-    artifact-name: altar_i_us_studio
-
-  - board: altar_i@uk
-    artifact-name: altar_i_uk
+    artifact-name: altar_i_us_v3.0.0
   - board: altar_i@uk
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
-    artifact-name: altar_i_uk_studio
+    artifact-name: altar_i_uk_v3.0.0
+  - board: nice_nano
+    shield: settings_reset
