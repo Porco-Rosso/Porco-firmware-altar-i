@@ -10,14 +10,17 @@ This repository contains firmware images for the Altar I keyboard, based on the 
 
 Begin by identifying your Altar I layout (either U.S. English or U.K. English), as found on the back of the keyboard.
 
-Firmware images can be found in the [**Actions**](https://github.com/electronicmaterialsoffice/firmware-altar-i/actions) section of this repository.
-Click on the latest workflow and navigate to the **Artifacts** section to download the latest firmware package (`firmware.zip`).
+Firmware images can be found in the [**Releases**](https://github.com/electronicmaterialsoffice/firmware-altar-i/releases) section of this repository.
+They are as described below:
 
 Inside the firmware package are the following images:
 
 - `altar_i_us_<version>.uf2` - Firmware image for **US English Layouts**
 - `altar_i_uk_<version>.uf2` - Firmware image for **UK English Layouts**
 - `settings_reset.uf2` - Firmware image to clear the onboard memory. **Used in [Recovery](#recovery)**
+
+Alternatively, firmware images for current development efforts can be found in the [**Actions**](https://github.com/electronicmaterialsoffice/firmware-altar-i/actions) section of this repository.
+Click on the latest workflow and navigate to the **Artifacts** section to download the latest firmware package (`firmware.zip`).
 
 ## Installing Firmware
 
