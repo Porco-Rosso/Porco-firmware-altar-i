@@ -16,6 +16,7 @@
 #include <zmk/events/hid_indicators_changed.h>
 #include <zmk/events/ble_active_profile_changed.h>
 #include <zmk/events/endpoint_changed.h>
+#include <zmk/events/position_state_changed.h>
 #include <zmk/split/central.h>
 
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
@@ -23,6 +24,11 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 #define INITIAL_DELAY 100
 #define BLINK_INTERVAL 300
 #define CAPS_LOCK_MASK 0x02
+
+#define POS_BT2 (28)
+#define POS_BT1 (43)
+#define POS_USB (57)
+static bool usb_selected = false;
 
 static const struct device *led_dev = DEVICE_DT_GET(DT_CHOSEN(zmk_led_indicator));
 
@@ -89,6 +95,33 @@ static int pairing_callback() {
 
 ZMK_LISTENER(pairing_callback, pairing_callback);
 ZMK_SUBSCRIPTION(pairing_callback, zmk_ble_active_profile_changed);
+
+static int position_state_callback(const zmk_event_t *ev) {
+    struct zmk_position_state_changed *data = as_zmk_position_state_changed(ev);
+    if (data == NULL) {
+        return ZMK_EV_EVENT_BUBBLE;
+    }
+    if (data->state) {
+        switch (data->position) {
+        case POS_BT1:
+        case POS_BT2:
+            board_state = BOARD_PAIRING_1;
+            pairing_callback();
+            break;
+        case POS_USB:
+            board_state = BOARD_READY;
+            k_work_cancel_delayable(&blink_work);
+            led_off(led_dev, 0);
+            indicator_callback();
+            break;
+        default:
+            break;
+        }
+    }
+    return ZMK_EV_EVENT_BUBBLE;
+}
+ZMK_LISTENER(position_state_callback, position_state_callback);
+ZMK_SUBSCRIPTION(position_state_callback, zmk_position_state_changed);
 
 void booting_callback();
 
