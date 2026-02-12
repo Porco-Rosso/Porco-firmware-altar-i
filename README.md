@@ -16,3 +16,7 @@ Don't expect any additional functionality or updates here.
 
 - Deep sleep set to 1 hour
 - idle time set to 1 minute
+
+## Use
+- Download the latest firmware from the build artifacts, or use the latest manually added one in the root of the project directory: 'altar_i_us_v3.1.1_PORCO_CUSTOM.uf2'
+- Follow the install [instructions from the original page](https://github.com/electronicmaterialsoffice/firmware-altar-i?tab=readme-ov-file#installing-firmware)
