@@ -11,3 +11,8 @@ sible.
 Original firmware and instructions can be found on the [original github page](https://github.com/electronicmaterialsoffice/firmware-altar-i)
 
 Don't expect any additional functionality or updates here.
+
+## Changes
+
+- Deep sleep set to 1 hour
+- idle time set to 1 minute
